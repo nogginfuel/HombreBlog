@@ -4,7 +4,7 @@ body {
 }
 
 #blogtitle {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nova Round', sans-serif;
   font-size: 42px;
   font-weight: 700;
   font-style: bold;
@@ -79,7 +79,7 @@ body {
 }
 
 #postauthor {
-  color: #3a87ad;
+  color: #6A953C;
   font-size: 14px;
   font-weight: 200;
   margin-top: 2px;

@@ -1,7 +1,7 @@
 // SETTINGS
 
 // Blog title
-var blog_title = "Chico Blog"
+var blog_title = "Hombre Blog"
 //var message_title = "";
 //var message_lead = "";
 
@@ -31,24 +31,24 @@ jqxhr.complete(function() {
   var simpleblog = jQuery.parseJSON(jqxhr.responseText);
   var tags_transform = 
   { tag:'div', id:'posttag', 
-    class: 'label label-info', 
+    class: 'round label', 
     html : '${tag}'
   };
   
   var id = 0;
   var transform = 
   [{tag:'div', id: function(){id=id+1; return("post_"+id);}, class:'row',children:[
-    {tag:'div',class:'span2',children:[
-      {tag: 'img', id: 'postimage', class: 'img-circle', src: '${authorimage}'},
+    {tag:'div',class:'large-2 small-2 columns',children:[
+      {tag: 'img', id: 'postimage', class: '', src: '${authorimage}'},
     ]},
-    {tag:'div',class:'span10',children:[
+    {tag:'div',class:'large-10 small-10 columns',children:[
       {tag:'h4', id: 'posttitle', html:'${title}'},
       {tag:'h6', id: 'postauthor', html:'${author}  ', children: [{tag: 'small', html: ' -  ${timestamp}'}]}    
       ]},
-    {tag:'div', class:'span12',children:[
+    {tag:'div', class:'large-12 small-12 columns',children:[
       {tag:'hr', class:'soften'}
     ]},
-    {tag:'div', id: 'posttext', class:'span12',children:[
+    {tag:'div', id: 'posttext', class:'large-12 small-12 columns',children:[
       {tag:'p',  html: function(){
         return(markdown.toHTML(this.content));
       }},
